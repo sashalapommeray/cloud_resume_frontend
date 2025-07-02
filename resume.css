@@ -1,157 +1,87 @@
-/* style.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-image: linear-gradient(rgb(30, 30, 30), rgb(80, 80, 80));
-    background-attachment: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.resume-builder {
-    padding: 27px 100px;
-}
-.container {
-    padding: 10px 30px;
-    background: rgb(240, 240, 240);
-    border-radius: 10px;
-    height: auto;
-    width: 60%;
-    margin: auto;
-}
-.container h1 {
-    text-align: center;
-    background-color: rgb(50, 50, 50);
-    padding: 10px;
-    color: white;
-    margin-bottom: 20px;
-}
-input,
-textarea {
-    background-color: transparent;
-    margin: 10px 0;
-    padding: 5px;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid black;
-    display: block;
-    width: 100%;
-}
-button {
-    border: none;
-    background-color: white;
-    padding: 15px;
-    border-radius: 7px;
-    font-weight: bold;
-    cursor: pointer;
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-}
-button:hover {
-    font-size: medium;
-}
-.output-container {
-    display: none;
-    width: 60%;
-    margin: 10px auto;
-}
-.output {
-    background-color: white;
-    border: 2px solid white;
-    margin-bottom: 10px;
-}
-.heading {
-    padding: 20px 10px;
-    text-align: center;
-    color: white;
-    background-color: rgb(50, 50, 50);
-    text-transform: uppercase;
-}
-.heading h4 {
-    color: rgb(200, 200, 200);
-    padding-top: 9px;
-}
-.info {
-    display: flex;
-    padding: 20px;
-}
-.left {
-    width: 40%;
-    border-right: 2px dashed black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.right {
-    width: 60%;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.box {
-    margin: 10px 0;
-    padding: 5px 10px;
-    height: auto;
-    overflow-wrap: break-word;
-}
-.box h2,
-.box p {
-    margin-bottom: 5px;
-}
-.tip {
-    font-size: small;
-    color: gray;
-    text-align: center;
-}
-.credit {
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 3px;
-    color: rgb(80, 80, 80);
-}
-a {
-    color: black;
-}
-a:hover {
-    color: rgb(247, 28, 12);
-    font-weight: bold;
-}
-/* media queries begin */
-@media screen and (max-width: 920px) {
-    .container {
-        width: 100%;
+ body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #333;
+      line-height: 1.5;
+      margin: 0;
+      padding: 40px;
+      background: #fafafa;
     }
-
-    .output-container {
-        width: 87%;
+    .resume-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-}
-
-@media screen and (max-width: 600px) {
-    .resume-builder {
-        padding: 10px 30px;
-    }
-
     h1 {
-        font-size: 160%;
+      font-size: 2rem;
+      margin-bottom: 0;
+      font-weight: 600;
     }
-
-    .info {
-        flex-direction: column;
+    a{
+      color: #0073e6;
+      text-decoration: underline #0073e6;
     }
-
-    .left {
-        border-right: none;
-        width: 100%;
+    .subtitle {
+      font-size: 0.95rem;
+      /* color: #666; */
+      color: #0073e6;
+      margin-top: 4px;
     }
-
-    .right {
-        padding-left: 0;
-        width: 100%;
+    .section {
+      margin-top: 30px;
     }
-}
-
-/* media queries end here */
+    .section-title {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border-bottom: 2px solid #0073e6;
+      /* border-bottom: 2px solid #e60073; */
+      padding-bottom: 4px;
+    }
+    .two-column {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .two-column > div {
+      width: 48%;
+    }
+    .experience-item, .edu-item {
+      margin-bottom: 20px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .item-role {
+      font-weight: 600;
+    }
+    .item-org {
+      color: #555;
+    }
+    .item-date {
+      color: #999;
+      font-size: 0.9rem;
+    }
+    ul.skills-list, ul.cert-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.skills-list li, ul.cert-list li {
+      background: #eaf4ff;
+      color: #0073e6;
+      
+      /* background: #ffeaf4;
+      color: #e60073; */
+      
+     
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 4px 6px 4px 0;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
