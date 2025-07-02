@@ -1,4 +1,9 @@
- body {
+:root {
+  --main-accent: #0073e6;
+  /* --main-accent: #e60073; */
+}
+
+body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       color: #333;
       line-height: 1.5;
@@ -19,13 +24,13 @@
       font-weight: 600;
     }
     a{
-      color: #0073e6;
-      text-decoration: underline #0073e6;
+      color: var(--main-accent);
+      text-decoration: underline var(--main-accent);
     }
     .subtitle {
       font-size: 0.95rem;
       /* color: #666; */
-      color: #0073e6;
+      color: var(--main-accent);
       margin-top: 4px;
     }
     .section {
@@ -36,7 +41,7 @@
       margin-bottom: 12px;
       font-size: 1.15rem;
       font-weight: 600;
-      border-bottom: 2px solid #0073e6;
+      border-bottom: 2px solid var(--main-accent);
       /* border-bottom: 2px solid #e60073; */
       padding-bottom: 4px;
     }
@@ -72,8 +77,12 @@
       margin: 0;
     }
     ul.skills-list li, ul.cert-list li {
+      /* background: accent*/
       background: #eaf4ff;
-      color: #0073e6;
+      /* background: #ffeaf4; */
+  
+      
+      color: var(--main-accent);
       
       /* background: #ffeaf4;
       color: #e60073; */
