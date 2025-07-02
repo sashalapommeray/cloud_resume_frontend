@@ -1,88 +1,112 @@
-<!-- resume.html  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Creator</title>
-    <!-- style link here -->
-    <link rel="stylesheet" href="resume.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume – Sasha Lapommeray</title>
+  <link rel="stylesheet" href="resume.css" />
+
 </head>
 <body>
-    <!-- input container starts here -->
-    <section class="resume-builder">
-        <div class="container">
-            <h1>Resume Creator</h1>
-            <div class="resume_container">
-                <form class="inputField">
-                    <input type="text" 
-                           name="name" 
-                           placeholder="Your Name" 
-                           title="Enter Your Name" />
-                    <input type="text" 
-                           name="title" 
-                           placeholder="Title/Sub Heading" 
-                           title="Enter Title/Sub Heading" />
-                    <textarea name="work_experience" 
-                              placeholder="Work Experience" 
-                              cols="40" rows="3"
-                              title="Enter Your Work Experience">
-                    </textarea>
-                    <textarea name="academic_details" 
-                              placeholder="Academic Details" 
-                              cols="40" rows="3"
-                              title="Enter Your Academic Details">
-                    </textarea>
-                    <input type="text" placeholder="Objective" 
-                           title="Enter Your Objective" 
-                           name="objective" />
-                    <textarea name="skills" 
-                              title="Enter Your Skills" 
-                              placeholder="Skills" cols="40"
-                              rows="3">
-                    </textarea>
-                    <textarea name="projects" 
-                              title="Enter Your Projects" 
-                              placeholder="Projects" 
-                              cols="40"
-                              rows="3">
-                    </textarea>
-                    <textarea name="achievements" 
-                              placeholder="Achievements" 
-                              cols="40" rows="3"
-                              title="Enter Your Achievements">
-                    </textarea>
-                    <textarea name="contact" 
-                              placeholder="Contact Information" 
-                              cols="40" rows="3"
-                              title="Enter Your Contact Information">
-                    </textarea>
-                </form>
-            </div>
-            <p class="credit">
-                Created by
-                <a href=
-"https://auth.geeksforgeeks.org/user/lunatic1/articles" 
-                   target="_blank">
-                      lunatic1
-                </a>
-            </p>
-            <p class="tip">
-                **You can use markup in the text area for text decoration**
-            </p>
-        </div>
-    </section>
-    <!-- input container ends here -->
-    <!-- output container starts here -->
-    <div class="output_container"></div>
-    <!-- output container ends here -->
+  <div class="resume-container">
+    <header>
+      <h1>Sasha Lapommeray</h1>
+      <p class="subtitle">Cyber Security Engineer • <a href="mailto:sashalapommeray@proton.me" target="_blank" rel="noopener">sashalapommeray@proton.me</a> • <a href="tel:+15167083268" target="_blank" rel="noopener">1-516-708-3268</a> • <a href="https://www.linkedin.com/in/sasha-lapommeray/" target="_blank" rel="noopener">LinkedIn Profile</a>
+ • <a href= "https://www.github.com/sashalapommeray" target="_blank" rel="noopener">Github Profile</a></p>
+    </header>
 
-    <!-- preview button -->
-    <button onclick="hide()">
-          Generate / Edit
-      </button>
-    <!-- script link here -->
-    <script src="resume.js"></script>
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p>Skilled cyber security engineer with experience designing and maintaining secure cloud configurations. Adept in writing and deploying secure code and automation software. Multidisciplinary skills across various cybersecurity sectors. Seeking fast-paced roles where I can contribute to overall organization and security.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills-list">
+        <li>AWS Cloud Security</li><li>Python</li><li>Java</li><li>Splunk</li><li>Bash</li><li>Linux</li><li>SQL</li><li>API Development</li><li>Wireshark</li><li>Burpsuite</li><li>Ghidra/Binary Ninja</li><li>GDB</li><li>SQL</li><li>JSON</li><li>Threat Intelligence</li><li>HTML • Javascript • CSS</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-role">Cyber Security Engineer</span>, 
+            <span class="item-org">Department of Health and Human Service</span>
+          </div>
+          <div class="item-date">August 2024—Present</div>
+        </div>
+        <ul>
+          <li>Spearheaded a cybersecurity tabletop exercise to enhance agency readiness</li>
+          <li>Developed and analyzed AWS RDS databases to support data-driven decision-making</li>
+          <li>Engaged in change management</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-role">Cyber Security Engineer</span>, 
+            <span class="item-org">Codoxo</span>
+          </div>
+          <div class="item-date">March 2024—August 2024</div>
+        </div>
+        <ul>
+          <li>Utilized programming to automate security tasks</li>
+          <li>Engaged with AWS to monitor security posture</li>
+          <li>Developed an automated DLP system in designed to ease alert fatigue </li>
+       </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-role">Cyber Security Intern</span>, 
+            <span class="item-org">Qualcomm</span>
+          </div>
+          <div class="item-date">May 2023—August 2023</div>
+        </div>
+        <ul>
+          <li>Utilized Python in order to analyze data dumps</li>
+          <li>Increased the efficiency of the DLP investigation process </li>
+       </ul>
+      </div>
+      
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+        <div class="item-header">
+          <div>
+            <span class="item-role">M.S. in Cybersecurity</span>, 
+            <span class="item-org">New York University</span>
+          </div>
+          <div class="item-date">2022—2024</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="item-header">
+          <div>
+            <span class="item-role">B.S. in Computer Science</span>, 
+            <span class="item-org">New York Institute of Technology</span>
+          </div>
+          <div class="item-date">2020—2022</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="cert-list">
+        <li>AWS Certified Cloud Practioner</li>
+        <li>CompTIA Security+</li>
+        <li>Public Trust Clearance </li>
+        <li>NSA-CAE Cyber Defense</li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
