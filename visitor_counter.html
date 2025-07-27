@@ -1,0 +1,9 @@
+<article>
+ <script>
+    //fetch('https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/')
+    fetch('https://tga4an3f7d.execute-api.us-east-1.amazonaws.com/test')
+      .then((response => response.json()))  
+      .then((data) => {document.getElementById("counter").innerHTML = data})                                
+  </script>
+    <p class="subDetails">You are visitor number <span id="counter">loading...</span></p> 
+</article>
