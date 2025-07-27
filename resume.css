@@ -139,7 +139,7 @@
 
 
 /* topnav */
-.topnav {
+/* .topnav {
   overflow: hidden;
   background-color: #eaf4ff;
 }
@@ -149,6 +149,34 @@
   color:var(--main-accent);
   text-align: center;
   padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: var(--main-accent);
+  color: #eaf4ff;
+}
+
+.topnav a.active {
+  background-color: var(--main-accent);
+  color: #eaf4ff;
+} */
+
+
+.topnav {
+  display: flex;
+  justify-content: space-evenly; /* even spacing between all items */
+  align-items: center;
+  background-color: #eaf4ff;
+  padding: 0; /* optional for cleaner look */
+}
+
+.topnav a {
+  flex: 1; /* ensures equal width */
+  text-align: center;
+  padding: 14px 16px;
+  color: var(--main-accent);
   text-decoration: none;
   font-size: 17px;
 }

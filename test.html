@@ -1,169 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- <script>
+            //  fetch('https://5cabfxax81.execute-api.ap-southeast-2.amazonaws.com/Prod/')
+              // fetch('https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/')
+              //     .then((response => response.json()))  
+              //     .then((data) => {document.getElementById("visitor_number").innerHTML = data})   
+                  
+                  
+
+
+
+                // Define the API URL
+                const apiUrl = 'https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev';
+
+                // Make a GET request
+                fetch(apiUrl)
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                  })
+                  .then(data => {
+                    console.log(data);
+                  })
+                  .catch(error => {
+                    console.error('Error:', error);
+                  });
+            </script>
+            <p class="subDetails">You are visitor number <span id="visitor_number">loading...</span></p> 
+            <p></p>
+          </article> -->
+
+
+
+          <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume – Jane Doe</title>
-  <link rel="stylesheet" href="resume.css" />
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: #333;
-      line-height: 1.5;
-      margin: 0;
-      padding: 40px;
-      background: #fafafa;
-    }
-    .resume-container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 30px 40px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0;
-      font-weight: 600;
-    }
-    .subtitle {
-      font-size: 0.95rem;
-      color: #666;
-      margin-top: 4px;
-    }
-    .section {
-      margin-top: 30px;
-    }
-    .section-title {
-      display: inline-block;
-      margin-bottom: 12px;
-      font-size: 1.15rem;
-      font-weight: 600;
-      border-bottom: 2px solid #0073e6;
-      /* border-bottom: 2px solid #e60073; */
-      padding-bottom: 4px;
-    }
-    .two-column {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .two-column > div {
-      width: 48%;
-    }
-    .experience-item, .edu-item {
-      margin-bottom: 20px;
-    }
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .item-role {
-      font-weight: 600;
-    }
-    .item-org {
-      color: #555;
-    }
-    .item-date {
-      color: #999;
-      font-size: 0.9rem;
-    }
-    ul.skills-list, ul.cert-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    ul.skills-list li, ul.cert-list li {
-      background: #eaf4ff;
-      color: #0073e6;
-      
-      /* background: #ffeaf4;
-      color: #e60073; */
-      
-     
-      display: inline-block;
-      padding: 6px 10px;
-      margin: 4px 6px 4px 0;
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-  </style>
+    <title>API Test</title>
 </head>
 <body>
-  <div class="resume-container">
-    <header>
-      <h1>Jane Doe</h1>
-      <p class="subtitle">Software Engineer • jane.doe@example.com • (555) 123‑4567 • linkedin.com/in/janedoe • github.com/janedoe</p>
-    </header>
+    <h1>API Test</h1>
+    <div id="result">Check console for API response</div>
+    
+    <script>
+        // Define the API URL
+        const apiUrl = 'https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev';
 
-    <section class="section">
-      <h2 class="section-title">Professional Summary</h2>
-      <p>Enthusiastic software engineer with 6+ years of experience designing and building full-stack web applications. Expertise in scalable frontend architectures, cloud services, and team leadership. Seeking impactful roles where I can drive innovation and deliver user-centric solutions.</p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Skills</h2>
-      <ul class="skills-list">
-        <li>JavaScript / TypeScript</li><li>React / Redux</li><li>Node.js / Express</li><li>Python / Django</li><li>AWS • Docker • Kubernetes</li><li>GraphQL • REST APIs</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="experience-item">
-        <div class="item-header">
-          <div>
-            <span class="item-role">Senior Software Engineer</span>, 
-            <span class="item-org">InnovateTech Inc</span>
-          </div>
-          <div class="item-date">Jan 2023 – Present</div>
-        </div>
-        <ul>
-          <li>Architected and led development of customer insights dashboard used by 10K+ users daily.</li>
-          <li>Introduced micro front-end architecture, reducing deployment cycle from 7 days to 2 days.</li>
-          <li>Mentored 4 junior engineers, fostering growth and collaboration.</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="item-header">
-          <div>
-            <span class="item-role">Software Engineer</span>, 
-            <span class="item-org">Web Solutions Ltd</span>
-          </div>
-          <div class="item-date">Jun 2019 – Dec 2022</div>
-        </div>
-        <ul>
-          <li>Built interactive dashboards in React, increasing user engagement by 35%.</li>
-          <li>Optimized Node.js backend API, improving response time by 50%.</li>
-          <li>Collaborated in Agile teams to deliver high-quality MVPs in fast-paced sprints.</li>
-        </ul>
-      </div>
-      
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Education</h2>
-      <div class="edu-item">
-        <div class="item-header">
-          <div>
-            <span class="item-role">B.S. in Computer Science</span>, 
-            <span class="item-org">University of Somewhere</span>
-          </div>
-          <div class="item-date">2015 – 2019</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Certifications</h2>
-      <ul class="cert-list">
-        <li>AWS Certified Solutions Architect – Associate</li>
-        <li>Certified Scrum Master (CSM)</li>
-      </ul>
-    </section>
-  </div>
+        // Make a GET request
+        fetch(apiUrl)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+            document.getElementById('result').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('result').innerHTML = `Error: ${error.message}`;
+          });
+    </script>
 </body>
 </html>
+
+
