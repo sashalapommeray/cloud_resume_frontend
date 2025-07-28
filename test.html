@@ -1,68 +1,23 @@
-<!-- <script>
-            //  fetch('https://5cabfxax81.execute-api.ap-southeast-2.amazonaws.com/Prod/')
-              // fetch('https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/')
-              //     .then((response => response.json()))  
-              //     .then((data) => {document.getElementById("visitor_number").innerHTML = data})   
-                  
-                  
+<article>
+  <script>
+    let visitorId = localStorage.getItem("visitorId");
+    if (!visitorId) {
+      visitorId = crypto.randomUUID(); 
+      localStorage.setItem("visitorId", visitorId);
+    }
 
+    fetch('https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ visitorId })
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("counter").innerText = data;
+    });
+  </script>
 
-
-                // Define the API URL
-                const apiUrl = 'https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev';
-
-                // Make a GET request
-                fetch(apiUrl)
-                  .then(response => {
-                    if (!response.ok) {
-                      throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                  })
-                  .then(data => {
-                    console.log(data);
-                  })
-                  .catch(error => {
-                    console.error('Error:', error);
-                  });
-            </script>
-            <p class="subDetails">You are visitor number <span id="visitor_number">loading...</span></p> 
-            <p></p>
-          </article> -->
-
-
-
-          <!DOCTYPE html>
-<html>
-<head>
-    <title>API Test</title>
-</head>
-<body>
-    <h1>API Test</h1>
-    <div id="result">Check console for API response</div>
-    
-    <script>
-        // Define the API URL
-        const apiUrl = 'https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev';
-
-        // Make a GET request
-        fetch(apiUrl)
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json();
-          })
-          .then(data => {
-            console.log(data);
-            document.getElementById('result').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('result').innerHTML = `Error: ${error.message}`;
-          });
-    </script>
-</body>
-</html>
-
-
+  <p class="subDetails">You are visitor number <span id="counter">loading...</span></p>
+</article>
