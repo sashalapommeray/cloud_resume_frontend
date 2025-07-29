@@ -1,32 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script src="visitor_counter.js"></script>
-<!-- <script>
-function checkVisitor() {
-  const visited = localStorage.getItem("visited") === "true";
-
-  fetch("https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ visited: visited })
-  })
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("counter").innerText = data;
-    if (!visited) {
-      localStorage.setItem("visited", "true");
-    }
-  })
-  .catch(err => console.error("Failed to fetch counter:", err));
-}
-
-window.onload = checkVisitor;
-</script> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visitor Counter</title>
+  <link rel="stylesheet" href="visitor.css" />
+  <script src="visitor_counter.js" defer></script>
 
 </head>
-<body onload="checkVisitor()"></body>
-<p class="subDetails">You are visitor number <span id="counter">loading...</span></p> 
+
+<body class="error-page">
+
+  <div class="error-container">
+    <h2 class="error-text">You are visitor number</h2>
+    <h1 class="error-number" id="counter">
+      <span class="loading-text">loading</span><span class="loading-dots"></span>
+    </h1>
+  </div>
+</body>
 </html>

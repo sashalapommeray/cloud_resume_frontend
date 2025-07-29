@@ -138,6 +138,37 @@
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* topnav */
 /* .topnav {
   overflow: hidden;
@@ -164,16 +195,65 @@
 } */
 
 
+
+
+
+
+
+
+
+
 .topnav {
   display: flex;
-  justify-content: space-evenly; /* even spacing between all items */
-  align-items: center;
+  justify-content: center; /* center links as a group */
+  gap: 20px; /* space between links */
   background-color: #eaf4ff;
-  padding: 0; /* optional for cleaner look */
+  padding: 12px 0; /* give some vertical breathing room */
 }
 
 .topnav a {
-  flex: 1; /* ensures equal width */
+  padding: 8px 16px;
+  font-size: 1rem; /* same scale as body text */
+  font-weight: 600; /* match headings weight */
+  color: var(--main-accent);
+  text-decoration: none;
+  border-radius: 4px; /* soften edges */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+  background-color: var(--main-accent);
+  color: #eaf4ff;
+}
+
+.topnav a.active {
+  background-color: var(--main-accent);
+  color: #eaf4ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .topnav {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  background-color: #eaf4ff;
+  padding: 0; 
+}
+
+.topnav a {
+  flex: 1; 
   text-align: center;
   padding: 14px 16px;
   color: var(--main-accent);
@@ -189,4 +269,4 @@
 .topnav a.active {
   background-color: var(--main-accent);
   color: #eaf4ff;
-}
+} */
