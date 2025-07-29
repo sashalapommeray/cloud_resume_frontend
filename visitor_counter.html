@@ -4,16 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Visitor Counter</title>
-  <link rel="stylesheet" href="visitor.css" />
+  <link rel="stylesheet" href="resume.css" />
   <script src="visitor_counter.js" defer></script>
 
 </head>
 
-<body class="error-page">
+<body class="visitor-page">
+  <div class="topnav">
+                <a href="resume.html">Resume</a>
+                <a class="active" href="visitor_counter.html">Visitor Counter</a>
+                <!-- <a href="credits.html">Credits</a> -->
+                
 
-  <div class="error-container">
-    <h2 class="error-text">You are visitor number</h2>
-    <h1 class="error-number" id="counter">
+    </div>
+  <div class="visitor-container">
+    <h2 class="visitor-text">You are visitor number</h2>
+    <h1 class="visitor-number" id="counter">
       <span class="loading-text">loading</span><span class="loading-dots"></span>
     </h1>
   </div>

@@ -10,7 +10,7 @@ body {
 }
 
 /* Center layout like error page */
-body.error-page {
+body.visitor-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,13 +18,13 @@ body.error-page {
   background: #fafafa;
 }
 
-.error-container {
+.visitor-container {
   text-align: center;
   max-width: 600px;
 }
 
 /* Big number style */
-.error-number {
+.visitor-number {
   position: relative;
   display: inline-block;
   font-size: 8rem;
@@ -36,39 +36,10 @@ body.error-page {
 }
 
 /* Smaller heading text */
-.error-text {
+.visitor-text {
   font-size: 1.5rem;
   margin: 20px 0;
   color: #000000;
 }
 
-/* loading text and dots positioning */
-.loading-text {
-  display: inline-block;
-  position: relative;
-}
 
-/* blinking dots animation */
-.loading-dots {
-  display: inline-block;
-  position: relative;
-  left: 0.3em;
-  opacity: 0.6;
-  font-weight: 700;
-  color: var(--main-accent);
-  width: 1.2em; /* fixed width to avoid shifting */
-  overflow: hidden;
-  vertical-align: bottom;
-}
-
-@keyframes blinkDots {
-  0% { content: "."; }
-  10% { content: ".."; }
-  20% { content: "..."; }
-  30% { content: ""; }
-}
-
-.loading-dots::after {
-  content: "...";
-  animation: blinkDots 1.2s steps(3, end) infinite;
-}
