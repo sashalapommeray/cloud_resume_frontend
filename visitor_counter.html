@@ -1,8 +1,32 @@
-<article>
- <script>
-    fetch('https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/')
-      .then((response => response.json()))  
-      .then((data) => {document.getElementById("counter").innerHTML = data})                                
-  </script>
-    <p class="subDetails">You are visitor number <span id="counter">loading...</span></p> 
-</article>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="visitor_counter.js"></script>
+<!-- <script>
+function checkVisitor() {
+  const visited = localStorage.getItem("visited") === "true";
+
+  fetch("https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ visited: visited })
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("counter").innerText = data;
+    if (!visited) {
+      localStorage.setItem("visited", "true");
+    }
+  })
+  .catch(err => console.error("Failed to fetch counter:", err));
+}
+
+window.onload = checkVisitor;
+</script> -->
+
+</head>
+<body onload="checkVisitor()"></body>
+<p class="subDetails">You are visitor number <span id="counter">loading...</span></p> 
+</html>
