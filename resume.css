@@ -18,6 +18,8 @@
   gap: 20px; /* space between links */
   background-color: #eaf4ff;
   padding: 12px 0; /* give some vertical breathing room */
+  /* give some horizontal breathing room */
+  /* margin-bottom: 30px; */
 }
 
 .topnav a {
@@ -54,6 +56,8 @@
       background: #fff;
       padding: 30px 40px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
     h1 {
       font-size: 2rem;
@@ -168,6 +172,35 @@ body.visitor-page {
 }
 
 
+/* credits page */
+
+body.credits-page{
+  padding: auto;
+  /* align-items: center;
+  justify-content: center; */
+  min-height: 85vh;
+  background: #fafafa;
+  
+}
+.credits-container {
+ 
+
+
+      max-width: 600px;
+      margin: auto;
+      padding: 200px 40px;
+       background: #fff; 
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  /* margin top has to go after margin auto to work */
+  margin-top: 70px;
+}
+
+.credits-text {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #000000;
+}
 
 
 
