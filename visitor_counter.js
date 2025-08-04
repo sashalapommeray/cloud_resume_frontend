@@ -1,7 +1,9 @@
 function checkVisitor() {
   const visited = localStorage.getItem("visited") === "true";
 
-  fetch("https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/", {
+  // fetch("https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/",
+    fetch("https://ijttczrrpj.execute-api.us-east-1.amazonaws.com/Prod/counter",
+     {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
