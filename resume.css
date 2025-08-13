@@ -14,21 +14,20 @@
 /* topnav */
 .topnav {
   display: flex;
-  justify-content: center; /* center links as a group */
-  gap: 20px; /* space between links */
+  justify-content: center; 
+  gap: 20px; 
   background-color: #eaf4ff;
-  padding: 12px 0; /* give some vertical breathing room */
-  /* give some horizontal breathing room */
+  padding: 12px 0; 
   /* margin-bottom: 30px; */
 }
 
 .topnav a {
   padding: 8px 16px;
-  font-size: 1rem; /* same scale as body text */
-  font-weight: 600; /* match headings weight */
+  font-size: 1rem; 
+  font-weight: 600; 
   color: var(--main-accent);
   text-decoration: none;
-  border-radius: 4px; /* soften edges */
+  border-radius: 4px; 
   transition: background-color 0.3s, color 0.3s;
 }
 

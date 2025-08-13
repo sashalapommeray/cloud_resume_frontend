@@ -1,23 +1,36 @@
 function checkVisitor() {
   const visited = localStorage.getItem("visited") === "true";
+  const counterEl = document.getElementById("counter");
 
-  // fetch("https://javzxejl8e.execute-api.us-east-1.amazonaws.com/dev/",
-    fetch("https://ijttczrrpj.execute-api.us-east-1.amazonaws.com/Prod/counter",
-     {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ visited: visited })
-  })
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("counter").innerText = data;
-    if (!visited) {
+  if (!visited) {
+    fetch("https://44gkxl6irc.execute-api.us-east-1.amazonaws.com/Prod/counter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ visited: false })
+    })
+    .then(res => res.json())
+    .then(data => {
       localStorage.setItem("visited", "true");
+      
+      if (counterEl) {
+        counterEl.innerText = data;
+      }
+    })
+    .catch(err => {
+      console.error("Failed to fetch counter:", err);
+    });
+  } 
+
+  else {
+    if (counterEl) {
+      fetch("https://44gkxl6irc.execute-api.us-east-1.amazonaws.com/Prod/counter", {
+        method: "GET"
+      })
+      .then(res => res.json())
+      .then(data => counterEl.innerText = data)
+      .catch(err => console.error("Failed to fetch counter:", err));
     }
-  })
-  .catch(err => console.error("Failed to fetch counter:", err));
+  }
 }
 
 window.onload = checkVisitor;
