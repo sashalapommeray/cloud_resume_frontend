@@ -1,4 +1,4 @@
-# cloud_resume_frontend
+# Cloud Resume Challenge - Frontend
 
 This repository contains the frontend source code for my cloud-hosted resume, created as part of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/). The static website is built with HTML, CSS, and vanilla JavaScript. It is hosted on AWS using S3 for storage and CloudFront for content delivery.
 
